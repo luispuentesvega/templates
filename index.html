@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+	html, body {
+		width: 100%;
+		height: 100%;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		font-family: helvetica, arial;
+		overflow:hidden;
+	}
+
+	.main {
+		display:flex;
+		flex-flow:row wrap;
+		justify-content: center;
+		align-content: center;
+		background: whitesmoke;
+		color: #444;
+		width:95%;
+	}
+
+	.header > h1 {
+		color: black;
+	}
+
+	.main > li {
+		background: lightgray;
+		width:100px;
+		list-style:none;
+		margin:10px;
+		text-align:center;
+		line-height:50px;
+		font-size:12px;
+		border:1px solid black;
+		border-radius:3px;
+	}
+		
+	.btn-demo {
+		background-color:#007BFF;
+		-webkit-appearance: button;
+		-moz-appearance: button;
+		appearance: button;
+		color:white;
+		width:80%;
+		border-color: #007bff;
+		border-radius:5px;
+		text-align:center;
+		text-decoration: none;
+		margin: 0 auto;
+		height: 30px;
+		transition: width 0.5s ease-out;
+		cursor:pointer;
+		line-height: 30px;
+	}
+	
+	.btn-demo:hover {
+		width:90%;
+	}
+	
+	/* Smartphones */
+	@media (min-width: 320px) and (max-width: 480px) {
+		.main {
+			flex-direction:column;
+			align-content: space-around;
+			align-items:center;
+			justify-content: center;
+			align-items: center;
+		}
+		.main > li {
+			width:80%;
+		}
+		
+	}
+</style>	
+	
+</head>
+<body>
+	<div class="header"><h1>Samples</h1></div>
+	<ul class="main">
+		<li>
+			<div>
+				<div class="title-project"><h4>Div Centered</h4></div>
+				<div class="button-project"><a href="src/div_centered.html" class="btn-demo">DEMO</a></div>
+			<div/>
+		</li>
+		<li>
+			<div>
+				<div class="title-project"><h4>First Design</h4></div>
+				<div class="button-project"><a href="src/first_page.html" class="btn-demo">DEMO</a></div>
+			<div/>
+		</li>
+		<li>
+			<div>
+				<div class="title-project"><h4>Nav Bar</h4></div>
+				<div class="button-project"><a href="src/nav_bar.html" class="btn-demo">DEMO</a></div>
+			<div/>
+		</li>
+	</ul>
+    
+</body>
+</html>
