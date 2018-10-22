@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Two vertical divs aligned</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      /* Tutorial from https://tutorialzine.com/2014/10/easiest-way-equal-height-sidebar */
+      
+      /* Simple reset and page style */
+      * {
+          margin: 0;
+          padding: 0;
+      }
+      
+      html {
+          background-color: #f3f3f3;
+      }
+      
+      body {
+          font: normal 14px san-serif;
+      }
+      
+      /*------------------------------------
+	    Pertinent code for the sidebar
+       -------------------------------------*/
+      #page {
+          display: -webkit-flex;
+          display: flex;
+          /*Centering the page*/
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+      
+    /*------------------------------------
+        Styling the content and sidebar
+    -------------------------------------*/
+    #main {
+        background-color:#fff;
+        padding:40px 100px 40px 40px;
+        line-height: 1.5;
+        color:#565a5c;
+    }
+      
+      #main > h1 {
+          margin-bottom: 28px;
+          font-size: 24px;
+      }
+      
+      #main > p {
+        margin-bottom: 24px;  
+      }
+        
+      
+    #main .wireframe-box{
+	    background-color:#e2e2e2;
+	    padding: 200px 0;
+	    text-align: center;
+	    margin-bottom: 24px;
+    }
+     
+      
+      #main {
+        -webkit-flex-grow:1;
+        flex-grow:1;  
+      }
+      
+      aside {
+           /* Give the sidebar a default width, and prevent it from shrinking */
+        width: 280px;
+        flex-shrink: 0;
+        background-color:#292c2f;
+	    color:#fff;
+	    padding:20px;
+      }
+      
+    aside .wireframe-box{
+        background-color: #37393C;
+        margin-top:20px;
+        padding:50px;
+    }
+
+    aside .wireframe-box.double{
+        padding:100px;
+    }
+
+      @media all and (max-width: 800px) {
+          #page {
+              flex-flow: column;
+          }
+          
+          aside {
+              width: auto;
+          }
+          #main {
+              padding-right:140px;
+          }
+      }
+      
+      
+      
+  </style>
+</head>
+<body>
+	<section id="page">
+		<div id="main">
+            <h1>An equal-height sidebar. Only with CSS.</h1>
+			<p>The sidebar and the main content of the page always have an equal height, no matter which has longer content. Try it out by making the content of this element longer by duplicating the following lorem ipsum paragraphs a few times over. You will see how the sidebar adapts to the height automatically. Did we mention this example is also responsive?</p>
+			<p>Morbi elementum massa faucibus ullamcorper posuere. Mauris lectus sem, scelerisque sit amet leo vitae, congue tincidunt ex. Nullam feugiat enim at massa ultricies pellentesque. Nam tempus turpis viverra, mattis diam ac, malesuada mi. Cras vitae lobortis enim, non vulputate libero. Donec sed eros sem. Vivamus nec erat ipsum. Nullam a placerat mauris, id tincidunt metus.</p>
+			<p>Pellentesque quis eros dignissim, volutpat augue in, lacinia lacus. Etiam vitae nunc et risus varius placerat sed eu arcu. Sed vel tellus magna. In tempor vel nibh non congue. Praesent auctor ullamcorper metus.</p>
+			<div class="wireframe-box">An image goes here.</div>
+		</div>
+		<aside>
+            <div class="wireframe-box double"></div>
+			<div class="wireframe-box double"></div>
+			<div class="wireframe-box double"></div>
+			<div class="wireframe-box"></div>
+			<div class="wireframe-box"></div>
+			<div class="wireframe-box"></div>
+		</aside>
+	</section>
+</body>
+</html>
