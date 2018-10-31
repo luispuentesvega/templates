@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Responsive comments section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+      /*https://tutorialzine.com/2015/11/using-flexbox-to-create-a-responsive-comment-section */
+		
+		/*Simple reset and page style*/
+		* {
+			margin:0;
+			padding:0;
+			box-sizing:border-box;
+		}
+		
+		html {
+			background-color:#f3f3f3;
+		}
+		
+		body {
+			font: normal 14px sans-serif;
+		}
+	  
+  </style>
+</head>
+<body>
+	<ul class="comment-section">
+		<li class="comment user-comment">
+			<div class="info">
+				<a href="#">Luis Puentes</a>
+				<span>2 hours ago</span>
+			</div>
+			<a class="avatar" href="#">
+				<img src="images/avatar_user_1.jpg" width="35" alt="Profile Avatar" title="Luis Puentes"/>
+			</a>
+			<p>Hello, How are you doing?</p>
+		</li>
+		<li class="comment author-comment">
+			<div class="info">
+				<a>Me</a>
+				<span>3 hours ago</span>
+			</div>
+			<a class="avatar">
+				<img src="iamges?avatar_author.jpg" width="35" alt="Profile avatar" title="Me"/>
+			</a>
+			<p>I'm fine, and you?</p>
+		</li>
+	</ul>
+</body>
+</html>
